@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient( to left top ,rgb(15, 60, 173), rgb(71, 71, 235) , rgb(100, 210, 254));
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.outer{
+    width: 70%;
+    margin: 2rem auto;
+    padding: 2%;
+    background-color: rgb(205, 211, 223);
+    border-radius: 0.3rem;
+}
+
+h1{
+    color: rgb(15, 15, 153);
+    text-align: center;
+}
+.errormsg{
+    color: red;
+    font-style: italic; 
+    font-size: 14px;
+}
+
+.form-label , p{
+    font-weight: bold;
+}
+
+.box{
+    padding-bottom: 2%;
+}
+
+/* .inputbox .success input{
+    border: green !important;
+} */
+
+
+@media(max-width:700px) {
+    .outer{
+        width: 90%;
+    }   
+}
+
+/* table */
+
+.table{
+    width: 70%;
+    margin: auto;
+    padding: 2%; 
+    border-radius: 0.3rem;
+}
+

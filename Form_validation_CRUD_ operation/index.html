@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student register form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://tse1.mm.bing.net/th/id/OIP.hfx9Zq847klfWKxmmTx4uAHaHw?pid=Api&P=0&h=180">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="outer">
+        <h1>STUDENT REGISTER FORM</h1>
+
+        <form  id="form"  onreset="resetErrors()">
+        <!-- contact info -->
+        <div class="contact">
+              <h3>Contact Details :</h3>
+              <div class="row">
+                <div class="col-6 inputbox">
+                    <label for="emaiInput" class="form-label">Email Id <span style="color: red;">*</span> </label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                    <p class="errormsg" id="emailInputError"></p>
+                </div>
+
+                 <div class="col-6 inputbox">
+                    <label for="mobileNum" class="form-label">Mobile Number<span style="color: red;">*</span></label>
+                    <input type="tel" class="form-control" id="mobileNum" placeholder="Eg: 9876543210" required>
+                    <div class="error"></div>
+                    <p class="errormsg" id="mobileNumError"></p>
+                </div>
+
+              </div>
+        </div>
+
+
+        <div class="Details">
+            <h3>Student Details :</h3>
+            <div class="row">
+                <div class="col-6 inputbox">
+                    <label for="firstname" class="form-label">First Name<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Eg: Elle" required>
+                    <p class="errormsg" id="firstnameError"></p>
+                </div>
+
+                <div class="col-6 inputbox">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="" required>
+                    <p class="errormsg" id="lastNameError"></p>
+                </div>
+
+                <div class="col-6 inputbox">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="" readonly>
+                    <p class="errormsg" id="fullNameError"></p>
+                </div>
+
+                <div class="col-6 inputbox">
+                     <label for="dob" class="form-label">Date of Birth<span style="color: red;">*</span></label>
+                    <input type="date" class="form-control" id="dob" placeholder="dd/mm/yyyy" required>
+                    <p class="errormsg" id="dobError"></p>
+                </div>
+                
+                <div class="box">
+                  
+                    <div class="row">
+                        <p>Gender</p>
+                        <div class="form-check col-12 col-md-4">
+                            <input type="radio" class="form-check-input" id="gender" name="gender" value="female" >
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+
+                        <div class="form-check col-12 col-md-4">
+                            <input type="radio" class="form-check-input" id="gender" name="gender" value="male" >
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+
+                        <div class="form-check col-12 col-md-4">
+                            <input type="radio" class="form-check-input" id="prefer_not_to_stay" id="gender" name="gender" value="prefer_not_to_stay">
+                            <label class="form-check-label" for="prefer_not_to_stay">Prefer not to say</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                        <button type="submit" id="Update_btn" class="btn btn-primary w-100"  style="background-image: linear-gradient(to right bottom, rgb(15, 60, 173), rgb(71, 71, 235), rgb(60, 165, 207));">
+                        Register
+                        </button>
+                </div>
+
+            </div>
+        </div>
+
+        </form>
+    </div>
+    
+
+
+    <div class="table">
+        <h3 class="mt-4">Registered Students</h3>
+        <table class="table table-bordered bg-light border-black" id="studentTable">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th colspan="2" style="text-align: center;">Options</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablebody">
+            <!-- rows inputs -->
+             <tr id="no_record"><td style="font-style: italic; color: red; text-align: center; " colspan="7" >No records found</td></tr>
+        </tbody>
+        </table>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
